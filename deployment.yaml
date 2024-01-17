@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mario-deployment
+  name: nodejs-kotak-deployment
 spec:
   replicas: 2  # You can adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: mario
+      app: nodejs
   template:
     metadata:
       labels:
-        app: mario
+        app: nodejs
     spec:
       containers:
-      - name: mario-container
-        image: uzairbagwan/mario:latest 
+      - name: nodejs-container
+        image: uzairbagwan/node-app:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
+
