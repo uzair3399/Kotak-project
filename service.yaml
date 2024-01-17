@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mario-service
+  name: nodejs-service
 spec:
   type: LoadBalancer
   selector:
-    app: mario
+    app: nodejs
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 5000
+      targetPort: 3000
